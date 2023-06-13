@@ -14,9 +14,6 @@ export const links = () => [
 ];
 
 export default function App() {
-  const test = "a";
-  const test2 = "b";
-
   return (
     <html lang="en">
       <head>
