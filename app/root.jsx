@@ -23,7 +23,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="flex h-full flex-col bg-gray-800 text-white">
+      <body className="flex h-full flex-col justify-between bg-gray-800 text-white">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
