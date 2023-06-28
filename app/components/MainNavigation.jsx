@@ -1,5 +1,6 @@
 import React from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
+import { Form } from "@remix-run/react";
 import { clsx } from "clsx";
 import { useTheme, ThemeSwitch } from "~/routes/resources+/theme";
 
@@ -106,15 +107,21 @@ export default function MainNavigation() {
         </NavigationMenuPrimitive.Item>
 
         <NavigationMenuPrimitive.Item asChild>
-          <NavigationMenuPrimitive.Link
-            href="https://github.com/ecklf/tailwindcss-radix"
-            className={clsx(
-              "px-3 py-2 text-sm rounded-md hover:bg-red-900 dark:hover:bg-gray-900",
-              "text-sm font-medium text-white dark:text-gray-100"
-            )}
+          <Form
+            className="flex h-full"
+            method="post"
+            action="/logout"
+            id="logout-form"
           >
-            GitHub
-          </NavigationMenuPrimitive.Link>
+            <button
+              className={clsx(
+                "px-3 py-2 text-sm rounded-md hover:bg-red-900 dark:hover:bg-gray-900",
+                "text-sm font-medium text-white dark:text-gray-100"
+              )}
+            >
+              Log Out
+            </button>
+          </Form>
         </NavigationMenuPrimitive.Item>
 
         <NavigationMenuPrimitive.Item asChild>
